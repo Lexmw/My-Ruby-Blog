@@ -1,0 +1,12 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//All the comments should have no design on the ul
+//The Comments should be Bootstrap cards that have the delete and edit options in the footer
+//THe commenter name should be in the top right at the top of the card
+
+.card {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+// I want to remove the ul designs from the list of articles
+//The list should have some padding on it and should have the Articles listed without the ul design
+//The add new article should be at the top of the header, in thr form of a primary button
+//There should be a footer with the links, and a short blurb
+//The number of articles should be in bar that stretches the length of the app
+
+body {
+    margin: 35px;
+    color: rgb(27, 4, 90);
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    height: 90vh;
+    
+}
+
+nav {
+   border-bottom: white 2px solid;
+   width: 100%;
+   padding: 5px;
+}
+
+.Header-name {
+    float:left;
+}
+
+.article-holder{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#show-container{
+    margin-bottom: 50px;
+    height: 25%;
+
+    ul {
+        float: right;
+        font-size: 10px;
+    }
+}

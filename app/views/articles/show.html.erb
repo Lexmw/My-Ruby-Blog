@@ -1,0 +1,26 @@
+<%= render "header"%>
+<div id="show-container">
+    <h3><%= @article.title%></h3>
+
+    <p><%= @article.body%></p>
+
+
+<ul class="list-unstyled list-group list-group-horizontal">
+    <li class="list-group-item">
+        <%= link_to "Edit", edit_article_path(@article)%>
+    </li>
+
+     <li class="list-group-item">
+        <%= link_to "Destroy", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+    </li>
+</ul>
+</div>
+
+<div id="comments-container">
+<h5>Comments</h5>
+<%= render @article.comments %>
+<h5> Add a Comment: </h5>
+<%= render 'comments/form' %>
+<div>

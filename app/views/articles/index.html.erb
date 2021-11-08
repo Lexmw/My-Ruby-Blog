@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ruby Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= render "header" %>
+ 
+
+    <ul class="list-unstyled list-group article-holder">
+      <% @articles.each do |article| %>
+        <li class="list-group-item">
+          <%= link_to article.title, article%>
+        </li>
+      <% end %>
+    </ul>
+
+    <h4 class="text-center"> Our blog has <%= Article.public_count %> public articles and counting! </h4>
+   
+  </body>
+</html>

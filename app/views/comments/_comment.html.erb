@@ -1,0 +1,8 @@
+<div class="card" style="width: 35rem;">
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted"><%= comment.commenter%></h6>
+    <p class="card-text"><%= comment.body%></p>
+    <%= link_to 'Destory Comment', [comment.article, comment], method: :delete, data: {confirm: "Are you sure?"}, :class => "card-link" %>
+    <%= link_to 'Destory Comment', [comment.article, comment], method: :delete, data: {confirm: "Are you sure?"}, :class => "card-link" %>
+  </div>
+</div>
